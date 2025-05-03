@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     private float jumpGravityScale = 1.0f;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private Quaternion initialRotation;
     private bool isGround;
     private float jumpTimer;
     private float originalGravity;
@@ -28,6 +29,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         originalGravity = rb.gravityScale;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        initialRotation = transform.rotation;
     }
 
     // Update is called once per frame
@@ -71,6 +74,15 @@ public class Player : MonoBehaviour
         }
 
         rb.linearVelocity = currentVelocity;
+
+        if ((moveDir < 0) && (transform.right.x > 0))
+        {
+            transform.rotation = initialRotation * Quaternion.Euler(0.0f, 180.0f, 0.0f);
+        }
+        else if ((moveDir > 0) && (transform.right.x < 0))
+        {
+            transform.rotation = initialRotation;
+        }
     }
 
     void ComputeGrounded()
