@@ -33,10 +33,58 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ComputeGrounded();
+        
         float moveDir = Input.GetAxis(horizontalAxisName);
         Vector2 currentVelocity = rb.linearVelocity;
         currentVelocity.x = moveDir * velocity.x;
 
+        if(Input.GetButton("Run") == true)
+            currentVelocity.x *= 2;
+        
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (isGround)
+            {
+                currentVelocity.y = velocity.y;
+                jumpTimer = 0.0f;
+                rb.gravityScale = jumpGravityScale;
+            }
+        }
+        else if (jumpTimer < jumpMaxDuration)
+        {
+            jumpTimer = jumpTimer + Time.deltaTime;
+            if (Input.GetButton("Jump"))
+            {
+                rb.gravityScale = Mathf.Lerp(jumpGravityScale, originalGravity,
+                jumpTimer / jumpMaxDuration);
+            }
+            else
+            {
+                jumpTimer = jumpMaxDuration;
+                rb.gravityScale = originalGravity;
+            }
+        }
+        else
+        {
+            rb.gravityScale = originalGravity;
+        }
+
         rb.linearVelocity = currentVelocity;
+    }
+
+    void ComputeGrounded()
+    {
+        Collider2D collider = Physics2D.OverlapCircle(groundCheck.position, 
+        groundCheckRadius, groundCheckLayers);
+
+        if ( collider != null)
+        {
+            isGround = true;
+        }
+        else
+        {
+            isGround = false;
+        }
     }
 }
