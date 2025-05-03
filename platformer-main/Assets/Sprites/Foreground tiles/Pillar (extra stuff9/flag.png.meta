@@ -1,34 +1,10 @@
 fileFormatVersion: 2
-guid: f7b584169f77c0f4699081b8ff672907
+guid: 368e83966e0d3964597235fad8cf5eff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3488321527664690955
-    second: true watershot_0
-  - first:
-      213: 3356478892101160154
-    second: true watershot_1
-  - first:
-      213: -1919779287714960455
-    second: true watershot_2
-  - first:
-      213: 3689982923069254618
-    second: true watershot_3
-  - first:
-      213: 7368765662678791649
-    second: true watershot_4
-  - first:
-      213: -2472729147236532769
-    second: true watershot_5
-  - first:
-      213: 6312708419477067292
-    second: true watershot_6
-  - first:
-      213: -2342830860442863594
-    second: true watershot_7
-  - first:
-      213: 2197444681552795747
-    second: true watershot_8
+      213: -5154189640090123692
+    second: flag_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 0.5
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -124,89 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: true watershot_0
+      name: flag_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 110
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b074dce82f1096030800000000000000
-      internalID: 3488321527664690955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: true watershot_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 110
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: adc49cbd4cb949e20800000000000000
-      internalID: 3356478892101160154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: true watershot_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 110
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 351eedcde439c804488497bad3f077f6
-      internalID: -1919779287714960455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: true watershot_3
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 36
         y: 0
-        width: 110
-        height: 32
+        width: 48
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e30783434ab569947981da93ad6eb642
-      internalID: 3689982923069254618
+      spriteID: 4520e6594d3a878b0800000000000000
+      internalID: -5154189640090123692
       vertices: []
       indices: 
       edges: []
@@ -215,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 35d9d54780f95d04786707eca26be1cc
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -225,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      true watershot_0: 3488321527664690955
-      true watershot_1: 3356478892101160154
-      true watershot_2: -1919779287714960455
-      true watershot_3: 3689982923069254618
+      flag_0: -5154189640090123692
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
