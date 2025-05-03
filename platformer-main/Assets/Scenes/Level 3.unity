@@ -47610,7 +47610,7 @@ MonoBehaviour:
 
     When
     there''s no solid ground below character, the character will start falling after
-    0,15s, with a gravity scale of 2.
+    0.15s, with a gravity scale of 2.
 
     The character''s trajectory can be modified
     mid-air.
@@ -47623,13 +47623,13 @@ MonoBehaviour:
     [Jump] button.
 
     The vertical velocity will be 500 units/second while jump
-    is pressed, during a maximum of 0,2 seconds.
+    is pressed, during a maximum of 0.2 seconds.
 
     Jump height will be between
-    88 to 188 units (from 0,35 to 0,55 seconds to top of trajectory).
+    88 to 188 units (from 0.35 to 0.55 seconds to top of trajectory).
 
     If the
-    character presses the jump button up to 0,1s before hitting the ground, it will
+    character presses the jump button up to 0.1s before hitting the ground, it will
     jump automatically again.
 
     This controller also controls some visuals:
@@ -47956,7 +47956,7 @@ GameObject:
   - component: {fileID: 1105942174}
   - component: {fileID: 1105942176}
   - component: {fileID: 1105942177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62506,7 +62506,7 @@ Transform:
   m_GameObject: {fileID: 1712757494}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.11, z: 0}
+  m_LocalPosition: {x: -0.087, y: -1.432, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

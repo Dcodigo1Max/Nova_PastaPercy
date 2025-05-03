@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         ComputeGrounded();
-        
+
         float moveDir = Input.GetAxis(horizontalAxisName);
         Vector2 currentVelocity = rb.linearVelocity;
         currentVelocity.x = moveDir * velocity.x;
@@ -86,5 +86,15 @@ public class Player : MonoBehaviour
         {
             isGround = false;
         }
+    }
+    private void OnDrawGizmos()
+    {
+        if (groundCheck == null) return;
+
+        ComputeGrounded();
+
+        if (isGround)  Gizmos.color = Color.green;
+        else Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 }
