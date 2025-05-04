@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4149bcfa39d09ac449ff65c85b4b0262
+guid: 501f9a574628aa644bb54c5a02661354
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -14,12 +14,6 @@ TextureImporter:
   - first:
       213: 5907599881459670541
     second: treesinfrontbg_3
-  - first:
-      213: -4080773345450134329
-    second: treesinfrontbg_4
-  - first:
-      213: 2408403747730575939
-    second: treesinfrontbg_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -119,9 +113,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 92
-        height: 320
+        y: 33
+        width: 278
+        height: 478
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +134,10 @@ TextureImporter:
       name: treesinfrontbg_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 0
-        width: 155
-        height: 320
+        x: 348
+        y: 141
+        width: 199
+        height: 370
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +156,10 @@ TextureImporter:
       name: treesinfrontbg_2
       rect:
         serializedVersion: 2
-        x: 358
-        y: 0
-        width: 165
-        height: 320
+        x: 780
+        y: 140
+        width: 364
+        height: 371
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +178,10 @@ TextureImporter:
       name: treesinfrontbg_3
       rect:
         serializedVersion: 2
-        x: 784
-        y: 0
-        width: 172
-        height: 320
+        x: 1204
+        y: 33
+        width: 76
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,50 +192,6 @@ TextureImporter:
       bones: []
       spriteID: d0e1b89dac20cf150800000000000000
       internalID: 5907599881459670541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: treesinfrontbg_4
-      rect:
-        serializedVersion: 2
-        x: 954
-        y: 0
-        width: 155
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7c4ff8f534e2e57c0800000000000000
-      internalID: -4080773345450134329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: treesinfrontbg_5
-      rect:
-        serializedVersion: 2
-        x: 1204
-        y: 0
-        width: 76
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3425333c27e5c6120800000000000000
-      internalID: 2408403747730575939
       vertices: []
       indices: 
       edges: []
@@ -264,8 +214,6 @@ TextureImporter:
       treesinfrontbg_1: -1657477788369696017
       treesinfrontbg_2: -3888818888725485393
       treesinfrontbg_3: 5907599881459670541
-      treesinfrontbg_4: -4080773345450134329
-      treesinfrontbg_5: 2408403747730575939
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
