@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -28,16 +29,31 @@ public class Player : MonoBehaviour
     private BulletShot BulletPrefab;
     [SerializeField]
     private Transform BulletSpawn;
+    [SerializeField]
+    private float HealthPoints;
+    [SerializeField]
+    private float MaxHealthPoints = 2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        HealthPoints = MaxHealthPoints;
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         originalGravity = rb.gravityScale;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         initialRotation = transform.rotation;
+    }
+    public void TakeDamage(float damage)
+    {
+        HealthPoints -= damage;
+
+        if(HealthPoints <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -48,6 +64,11 @@ public class Player : MonoBehaviour
         float moveDir = Input.GetAxis(horizontalAxisName);
         Vector2 currentVelocity = rb.linearVelocity;
         currentVelocity.x = moveDir * velocity.x;
+
+        if(Input.GetButtonDown("Cancel"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
         if(Input.GetButtonDown("Fire1"))
         {
