@@ -26,18 +26,34 @@ public class Player : MonoBehaviour
     private float jumpTimer;
     private float originalGravity;
     [SerializeField]
+    //Bullet Firing Variables
     private BulletShot BulletPrefab;
     [SerializeField]
     private Transform BulletSpawn;
+    //Health Variables
     [SerializeField]
-    private float HealthPoints;
+    private float healthPoints;
     [SerializeField]
-    private float MaxHealthPoints = 2;
+    private float maxHealthPoints = 2;
+    //WaterPower variables
+    [SerializeField]
+    private int maxWaterPower = 5;
+    [SerializeField]
+    private int waterPower;
+    //WaterRestore variables
+    [SerializeField]
+    private Transform waterCheck;
+    [SerializeField, Range(0.1f, 5.0f)]
+    private float waterCheckRadius = 2.0f;
+    [SerializeField]
+    private LayerMask waterCheckLayers;
+    private bool inWater;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        HealthPoints = MaxHealthPoints;
+        healthPoints = maxHealthPoints;
+        waterPower = maxWaterPower;
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -48,9 +64,9 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        HealthPoints -= damage;
+        healthPoints -= damage;
 
-        if(HealthPoints <= 0)
+        if(healthPoints <= 0)
         {
             Destroy(gameObject);
         }
@@ -60,10 +76,19 @@ public class Player : MonoBehaviour
     void Update()
     {
         ComputeGrounded();
+        ComputeWater();
 
         float moveDir = Input.GetAxis(horizontalAxisName);
         Vector2 currentVelocity = rb.linearVelocity;
         currentVelocity.x = moveDir * velocity.x;
+
+        if(inWater)
+        {
+            if(waterPower < 5)
+            {
+                waterPower++;
+            }
+        }
 
         if(Input.GetButtonDown("Cancel"))
         {
@@ -72,7 +97,9 @@ public class Player : MonoBehaviour
 
         if(Input.GetButtonDown("Fire1"))
         {
-            Instantiate(BulletPrefab,BulletSpawn.position,transform.rotation);
+            if(waterPower > 0)
+                Instantiate(BulletPrefab,BulletSpawn.position,transform.rotation);
+                waterPower--;
         }
 
         if(Input.GetButton("Run"))
@@ -134,6 +161,20 @@ public class Player : MonoBehaviour
         else
         {
             isGround = false;
+        }
+    }
+    void ComputeWater()
+    {
+        Collider2D watercollider = Physics2D.OverlapCircle(waterCheck.position, 
+        waterCheckRadius, waterCheckLayers);
+
+        if ( watercollider != null)
+        {
+            inWater = true;
+        }
+        else
+        {
+            inWater = false;
         }
     }
     private void OnDrawGizmos()
