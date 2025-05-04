@@ -28,16 +28,31 @@ public class Player : MonoBehaviour
     private BulletShot BulletPrefab;
     [SerializeField]
     private Transform BulletSpawn;
+    [SerializeField]
+    private float HealthPoints;
+    [SerializeField]
+    private float MaxHealthPoints = 2;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        HealthPoints = MaxHealthPoints;
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         originalGravity = rb.gravityScale;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         initialRotation = transform.rotation;
+    }
+    public void TakeDamage(float damage)
+    {
+        HealthPoints -= damage;
+
+        if(HealthPoints <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

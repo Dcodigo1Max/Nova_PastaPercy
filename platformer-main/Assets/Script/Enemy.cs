@@ -26,9 +26,10 @@ public class Enemy : MonoBehaviour
 
     private Animator animator;
     private Quaternion initialRotation;
-
+    [SerializeField]
     private float HealthPoints;
-    private float MaxHealthPoints = 2;
+    [SerializeField]
+    private float MaxHealthPoints = 1;
 
     private float GetDirection()
     {
@@ -102,6 +103,15 @@ public class Enemy : MonoBehaviour
         //animator.SetFloat("AbsVelocityX", Mathf.Abs(currentVelocity.x));
         //animator.SetFloat("VelocityY", currentVelocity.y);
         //animator.SetBool("isGrounded", isGround);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        var player = collision.collider.GetComponent<Player>();
+        
+        if (player)
+        {
+            player.TakeDamage(1);
+        }
     }
     void ComputeGrounded()
     {

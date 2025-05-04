@@ -9479,7 +9479,7 @@ MonoBehaviour:
   jumpMaxDuration: 0.1
   jumpGravityScale: 1
   BulletPrefab: {fileID: 4391125026349907760, guid: 30b46182f33db3742a95d4482e320d9c, type: 3}
-  BulletSpawn: {fileID: 707571784}
+  BulletSpawn: {fileID: 1226097690}
 --- !u!95 &707571786
 Animator:
   serializedVersion: 7
@@ -16299,6 +16299,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   velocity: {x: 100, y: 0}
+  MaxHealthPoints: 1
 --- !u!61 &823781507
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16370,7 +16371,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &823781509
 SpriteRenderer:
