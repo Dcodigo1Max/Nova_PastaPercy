@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float jumpGravityScale = 1.0f;
     private Rigidbody2D rb;
+    private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Quaternion initialRotation;
     private bool isGround;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         originalGravity = rb.gravityScale;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -83,6 +85,10 @@ public class Player : MonoBehaviour
         {
             transform.rotation = initialRotation;
         }
+
+        animator.SetFloat("AbsVelocityX", Mathf.Abs(currentVelocity.x));
+        animator.SetFloat("VelocityY", currentVelocity.y);
+        animator.SetBool("isGrounded", isGround);
     }
 
     void ComputeGrounded()
