@@ -48,6 +48,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     private LayerMask waterCheckLayers;
     private bool inWater;
+    [SerializeField]
+    private Transform endCheck;
+    [SerializeField, Range(0.1f, 5.0f)]
+    private float endCheckRadius = 2.0f;
+    [SerializeField]
+    private LayerMask endCheckLayers;
+    private bool inend;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -77,10 +84,16 @@ public class Player : MonoBehaviour
     {
         ComputeGrounded();
         ComputeWater();
+        ComputeEnd();
 
         float moveDir = Input.GetAxis(horizontalAxisName);
         Vector2 currentVelocity = rb.linearVelocity;
         currentVelocity.x = moveDir * velocity.x;
+
+        if(inend)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
         if(inWater)
         {
@@ -175,6 +188,20 @@ public class Player : MonoBehaviour
         else
         {
             inWater = false;
+        }
+    }
+    void ComputeEnd()
+    {
+        Collider2D endcollider = Physics2D.OverlapCircle(endCheck.position, 
+        endCheckRadius, endCheckLayers);
+
+        if ( endcollider != null)
+        {
+            inend = true;
+        }
+        else
+        {
+            inend = false;
         }
     }
     private void OnDrawGizmos()
