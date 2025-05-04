@@ -24,6 +24,11 @@ public class Player : MonoBehaviour
     private bool isGround;
     private float jumpTimer;
     private float originalGravity;
+    [SerializeField]
+    private BulletShot BulletPrefab;
+    [SerializeField]
+    private Transform BulletSpawn;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,7 +49,12 @@ public class Player : MonoBehaviour
         Vector2 currentVelocity = rb.linearVelocity;
         currentVelocity.x = moveDir * velocity.x;
 
-        if(Input.GetButton("Run") == true)
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(BulletPrefab,BulletSpawn.position,transform.rotation);
+        }
+
+        if(Input.GetButton("Run"))
             currentVelocity.x *= 2;
         
         if (Input.GetButtonDown("Jump"))

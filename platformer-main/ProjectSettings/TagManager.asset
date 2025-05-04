@@ -16,8 +16,8 @@ TagManager:
   - ExitCheck
   - Enemy
   - Props
-  - 
-  - 
+  - Bullets
+  - Player
   - 
   - 
   - 
