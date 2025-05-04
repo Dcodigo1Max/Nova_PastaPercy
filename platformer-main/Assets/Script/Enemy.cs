@@ -27,17 +27,32 @@ public class Enemy : MonoBehaviour
     private Animator animator;
     private Quaternion initialRotation;
 
+    private float HealthPoints;
+    private float MaxHealthPoints = 2;
+
     private float GetDirection()
     {
         return direction;
     }
     void Start()
     {
+
+        HealthPoints = MaxHealthPoints;
+
         rb = GetComponent<Rigidbody2D>();
 
         //animator = GetComponent<Animator>();
 
         initialRotation = transform.rotation;
+    }
+    public void TakeDamage(float damage)
+    {
+        HealthPoints -= damage;
+
+        if(HealthPoints <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     // Update is called once per frame
     void Update()
