@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: AbsVelocityX
+    m_ConditionEvent: AbsVelocity
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7753828011505381544}
@@ -169,7 +169,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: AbsVelocityX
+    m_ConditionEvent: AbsVelocity
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1585399878923193194}
@@ -225,7 +225,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: AbsVelocityX
+  - m_Name: AbsVelocity
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
