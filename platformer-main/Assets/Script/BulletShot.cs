@@ -3,7 +3,7 @@ using UnityEngine;
 public class BulletShot : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 4.5f;
+    private float speed = 400f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,11 +18,11 @@ public class BulletShot : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         var enemy = collision.collider.GetComponent<Enemy>();
-        
-        if (enemy)
-        {
-            enemy.TakeDamage(1);
-        }
-        Destroy(gameObject);
+
+        //if (enemy)
+        //{
+        //    enemy.TakeDamage(1);
+        //}
+        //Destroy(gameObject);
     }
 }
