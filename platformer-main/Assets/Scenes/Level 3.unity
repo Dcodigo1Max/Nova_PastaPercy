@@ -7998,11 +7998,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &490236272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4020042544948456468, guid: 64b9666aa4617cb41b80a801ab241986, type: 3}
-  m_PrefabInstance: {fileID: 8277606150596034854}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &490236273 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5546678023399779918, guid: 64b9666aa4617cb41b80a801ab241986, type: 3}
@@ -10072,8 +10067,6 @@ GameObject:
   - component: {fileID: 707571786}
   - component: {fileID: 707571790}
   - component: {fileID: 707571789}
-  - component: {fileID: 707571788}
-  - component: {fileID: 707571787}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10241,36 +10234,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &707571787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707571779}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ed74c65b4066e4b8177c36a34282f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _faction: 0
-  maxHealth: 3
-  invulnerableDuration: 2
---- !u!114 &707571788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707571779}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35765683620e6564a9455bd6a7cd3d48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxAmmo: 5
-  lose: 1
-  gain: 0
 --- !u!114 &707571789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18305,11 +18268,6 @@ PrefabInstance:
 --- !u!224 &853143571 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 113992495955999506, guid: 380ee939d5ccda04cb36df0d01fefe89, type: 3}
-  m_PrefabInstance: {fileID: 853143570}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &853143572 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3550279929650624532, guid: 380ee939d5ccda04cb36df0d01fefe89, type: 3}
   m_PrefabInstance: {fileID: 853143570}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &853383028
@@ -48256,11 +48214,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &912575708 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3550279929650624532, guid: 380ee939d5ccda04cb36df0d01fefe89, type: 3}
-  m_PrefabInstance: {fileID: 3256104729574968711}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &912575709 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 113992495955999506, guid: 380ee939d5ccda04cb36df0d01fefe89, type: 3}
@@ -49308,11 +49261,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5546678023399779918, guid: 64b9666aa4617cb41b80a801ab241986, type: 3}
   m_PrefabInstance: {fileID: 1024900989}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1024900991 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4020042544948456468, guid: 64b9666aa4617cb41b80a801ab241986, type: 3}
-  m_PrefabInstance: {fileID: 1024900989}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1077054985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49417,11 +49365,6 @@ PrefabInstance:
 --- !u!224 &1077054986 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5546678023399779918, guid: 64b9666aa4617cb41b80a801ab241986, type: 3}
-  m_PrefabInstance: {fileID: 1077054985}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1077054987 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4020042544948456468, guid: 64b9666aa4617cb41b80a801ab241986, type: 3}
   m_PrefabInstance: {fileID: 1077054985}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1085522430
@@ -77105,11 +77048,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 113992495955999506, guid: 380ee939d5ccda04cb36df0d01fefe89, type: 3}
   m_PrefabInstance: {fileID: 1233145883}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1233145885 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3550279929650624532, guid: 380ee939d5ccda04cb36df0d01fefe89, type: 3}
-  m_PrefabInstance: {fileID: 1233145883}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1244770666
 GameObject:
   m_ObjectHideFlags: 0
@@ -77493,7 +77431,6 @@ GameObject:
   - component: {fileID: 1323880280}
   - component: {fileID: 1323880281}
   - component: {fileID: 1323880283}
-  - component: {fileID: 1323880282}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -77541,23 +77478,6 @@ MonoBehaviour:
   description: 
   valueHandler: {fileID: 0}
   variable: {fileID: 11400000, guid: b92fc9b1d5d4cd04bb45aa8d08cd81eb, type: 2}
---- !u!114 &1323880282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323880279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f91495c39c180343be71e50958bf6cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthSystem: {fileID: 707571787}
-  healthItems:
-  - {fileID: 490236272}
-  - {fileID: 1024900991}
-  - {fileID: 1077054987}
 --- !u!114 &1323880283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79605,11 +79525,6 @@ PrefabInstance:
 --- !u!224 &1633488095 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 113992495955999506, guid: 380ee939d5ccda04cb36df0d01fefe89, type: 3}
-  m_PrefabInstance: {fileID: 1633488094}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1633488096 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3550279929650624532, guid: 380ee939d5ccda04cb36df0d01fefe89, type: 3}
   m_PrefabInstance: {fileID: 1633488094}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1639892340
@@ -104313,11 +104228,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 113992495955999506, guid: 380ee939d5ccda04cb36df0d01fefe89, type: 3}
   m_PrefabInstance: {fileID: 1912386620}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1912386622 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3550279929650624532, guid: 380ee939d5ccda04cb36df0d01fefe89, type: 3}
-  m_PrefabInstance: {fileID: 1912386620}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1943850800
 GameObject:
   m_ObjectHideFlags: 0
@@ -115032,7 +114942,6 @@ GameObject:
   - component: {fileID: 1993130083}
   - component: {fileID: 1993130084}
   - component: {fileID: 1993130086}
-  - component: {fileID: 1993130085}
   m_Layer: 5
   m_Name: WaterBar
   m_TagString: Untagged
@@ -115082,25 +114991,6 @@ MonoBehaviour:
   description: 
   valueHandler: {fileID: 0}
   variable: {fileID: 11400000, guid: b247638815fa81647a72439ec24cf032, type: 2}
---- !u!114 &1993130085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1993130082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3c539ba60087f4693bb2e85c6e1c7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waterSystem: {fileID: 707571788}
-  waterItems:
-  - {fileID: 912575708}
-  - {fileID: 1233145885}
-  - {fileID: 1912386622}
-  - {fileID: 853143572}
-  - {fileID: 1633488096}
 --- !u!114 &1993130086
 MonoBehaviour:
   m_ObjectHideFlags: 0

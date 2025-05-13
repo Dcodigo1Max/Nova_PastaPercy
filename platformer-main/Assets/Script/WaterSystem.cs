@@ -1,92 +1,34 @@
-using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.UIElements;
-using static HealthSystem;
 
 public class WaterSystem : MonoBehaviour
 {
+    [SerializeField]
+    private float maxWaterPower = 100.0f;
+    
+    public float waterpower;
+    public float wp => waterpower;
+    public float wpNormalized => wp / maxWaterPower;
 
-
-    public delegate void OnAmmoChange(int lose);
-    public delegate void OnAmmoGain(int gain);
-
-    [SerializeField] private int maxAmmo = 5;
-    [SerializeField] private int lose;
-    [SerializeField] private int gain;
-
-    public int mana => ammo;
-
-    public int manaNormalised => mana / maxAmmo;
-
-    public event OnAmmoChange onAmmoChange;
-    public event OnAmmoGain onAmmoGain;
-   
-        
-    private int ammo;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        ammo = maxAmmo;
-
+        waterpower = maxWaterPower;
     }
 
-    // Update is called once per frame
     void Update()
     {
-     
-
-    }
-
-    public bool DealDamage(int lose)
-    {
-        if (ammo <= 0) return false;
-
-
-
-        onAmmoChange?.Invoke(lose);
-
-        if (ammo >= 5 && Input.GetKeyDown("w"))
-        {
-            ammo = ammo - lose;
-        }
-       
-
-        return true;
-    }
-
-    public bool GainAmmo(int gain)
-    {
-        if (ammo <= 0.0f) return false;
         
-        onAmmoGain?.Invoke(gain);
+    }
 
-        if (ammo <= 0.0f)
-        {
-            ammo = ammo + gain;
-            onAmmoGain?.Invoke(gain);
-
-        }
-        if (ammo >= 5.0f)
-        {
-            ammo = maxAmmo;
-            onAmmoGain?.Invoke(gain);
-        }
-
+    public bool ReduceWaterPower()
+    {
+        if(waterpower <= 0) return false;
+        waterpower--;
         return true;
     }
-    
-    /*
-    private void OnTriggerEnter2D(Collider2D collider) 
+    public bool IncreaseWaterPower()
     {
-        collider.GetComponent<BoxCollider2D>();
-        if (Input.GetKeyDown("w") && collider.tag == "Water")
-        {
-            ammo = ammo - 1;
-
-        }
-
+        if(waterpower >= maxWaterPower) return false;
+        waterpower++;
+        return true;
     }
-     */ 
-
-
 }

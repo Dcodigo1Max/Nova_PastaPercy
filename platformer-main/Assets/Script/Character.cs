@@ -13,8 +13,11 @@ public abstract class Character : MonoBehaviour
     protected Rigidbody2D rb;
     protected SpriteRenderer spriteRenderer;
     protected Animator animator;
+    protected HealthSystem healthSystem;
     protected Quaternion initialRotation;
     protected bool isGround;
+    protected bool invulnerableEnable = false;
+    protected float invulnerableTimer;
     protected abstract float GetDirection();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,7 +27,19 @@ public abstract class Character : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        healthSystem = GetComponent<HealthSystem>();
+        healthSystem.onInvulnerable += HealthSystem_onInvulnerable;
+
         initialRotation = transform.rotation;
+    }
+
+    private void HealthSystem_onInvulnerable(bool on)
+    {
+        invulnerableEnable = on;
+        if (invulnerableEnable)
+        {
+            invulnerableTimer = 0.1f;
+        }
     }
 
     // Update is called once per frame
@@ -44,6 +59,16 @@ public abstract class Character : MonoBehaviour
         animator.SetFloat("AbsVelocity", Mathf.Abs(currentVelocity.x));
         animator.SetFloat("VelocityY", currentVelocity.y);
         animator.SetBool("isGrounded", isGround);
+
+        if (invulnerableEnable)
+        {
+            invulnerableTimer -= Time.deltaTime;
+            if (invulnerableTimer < 0)
+            {
+                invulnerableTimer = 0.1f;
+                spriteRenderer.enabled = !spriteRenderer.enabled;
+            }
+        }
     }
 
     protected void ComputeGrounded()

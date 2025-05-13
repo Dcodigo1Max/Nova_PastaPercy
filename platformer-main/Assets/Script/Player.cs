@@ -16,6 +16,13 @@ public class Player : Character
     private float originalGravity;
     private float moveDir;
 
+    protected WaterSystem waterSystem;
+
+    [SerializeField]
+    private BulletShot BulletPrefab;
+    [SerializeField]
+    private Transform BulletSpawn;
+
     protected override float GetDirection()
     {
         return moveDir;
@@ -26,7 +33,16 @@ public class Player : Character
     {
         base.Start();
 
+        waterSystem = GetComponent<WaterSystem>();
+
         originalGravity = rb.gravityScale;
+
+        healthSystem.onDeath += PlayerOnDeath;
+    }
+
+    private void PlayerOnDeath()
+    {
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
@@ -41,6 +57,13 @@ public class Player : Character
         Vector2 currentVelocity = rb.linearVelocity;
 
         currentVelocity.x = moveDir * velocity.x;
+
+        if(Input.GetButtonDown("Fire1"))
+        {
+            if(waterSystem.waterpower > 0)
+                Instantiate(BulletPrefab,BulletSpawn.position,transform.rotation);
+                waterSystem.ReduceWaterPower();
+        }
 
         if(Input.GetButtonDown("Jump"))
         {
