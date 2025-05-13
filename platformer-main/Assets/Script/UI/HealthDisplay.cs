@@ -29,6 +29,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     void UpdateHealthDisplay()
     {
+        Debug.Log("Health modified");
         int health = healthSystem.hp;
 
         for (int i = 0; i < health; i++)
