@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player : Character
@@ -49,6 +50,7 @@ public class Player : Character
     protected override void Update()
     {
         ComputeGrounded();
+
         groundCollider.enabled = isGround;
         airCollider.enabled = !isGround;
 
