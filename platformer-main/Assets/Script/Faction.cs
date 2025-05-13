@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-    public enum Faction { Player, Enemy};
+public enum Faction { Player, Enemy};
 
 public static class FactionHelper
 {

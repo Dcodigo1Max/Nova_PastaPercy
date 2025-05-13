@@ -10067,6 +10067,8 @@ GameObject:
   - component: {fileID: 707571786}
   - component: {fileID: 707571790}
   - component: {fileID: 707571789}
+  - component: {fileID: 707571792}
+  - component: {fileID: 707571791}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10257,6 +10259,8 @@ MonoBehaviour:
   jumpGravityScale: 1
   groundCollider: {fileID: 707571781}
   airCollider: {fileID: 707571790}
+  BulletPrefab: {fileID: 4391125026349907760, guid: 30b46182f33db3742a95d4482e320d9c, type: 3}
+  BulletSpawn: {fileID: 1226097690}
 --- !u!61 &707571790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10303,6 +10307,40 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.5004725, y: 2.5434103}
   m_EdgeRadius: 0
+--- !u!114 &707571791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707571779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35765683620e6564a9455bd6a7cd3d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWaterPower: 5
+  waterpower: 0
+  waterCheck: {fileID: 1160604837}
+  waterCheckRadius: 2
+  waterCheckLayers:
+    serializedVersion: 2
+    m_Bits: 16
+--- !u!114 &707571792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707571779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ed74c65b4066e4b8177c36a34282f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _faction: 0
+  maxHealth: 3
+  invulnerabilityDuration: 2
 --- !u!1 &715359441
 GameObject:
   m_ObjectHideFlags: 0
@@ -79119,9 +79157,6 @@ GameObject:
   - component: {fileID: 1628612592}
   - component: {fileID: 1628612591}
   - component: {fileID: 1628612590}
-  - component: {fileID: 1628612595}
-  - component: {fileID: 1628612594}
-  - component: {fileID: 1628612596}
   m_Layer: 0
   m_Name: WaterSensor
   m_TagString: Untagged
@@ -79272,51 +79307,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 91.037}
---- !u!114 &1628612594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628612589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ed74c65b4066e4b8177c36a34282f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _faction: 0
-  maxHealth: 3
-  invulnerableDuration: 2
---- !u!114 &1628612595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628612589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d6598f60904fde4faf48144cf093a07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _faction: 0
-  heal: 1
-  gain: 1
---- !u!114 &1628612596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628612589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35765683620e6564a9455bd6a7cd3d48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxAmmo: 5
-  lose: 1
-  gain: 1
 --- !u!1 &1630952535
 GameObject:
   m_ObjectHideFlags: 0

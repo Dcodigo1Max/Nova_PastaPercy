@@ -18,6 +18,7 @@ public abstract class Character : MonoBehaviour
     protected bool isGround;
     protected bool invulnerableEnable = false;
     protected float invulnerableTimer;
+
     protected abstract float GetDirection();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -84,6 +85,7 @@ public abstract class Character : MonoBehaviour
             isGround = false;
         }
     }
+    
     protected virtual void OnDrawGizmosSelected()
     {
         if(groundCheck == null) return;
