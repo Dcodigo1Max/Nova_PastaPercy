@@ -18,6 +18,13 @@ public class WaterSystem : MonoBehaviour
     private LayerMask waterCheckLayers;
     private bool inWater;
 
+    private float cooldownStepTimer;
+
+
+    void Start()
+    {
+        cooldownStepTimer = 1.0f;
+    }
 
     void Awake()
     {
@@ -29,8 +36,15 @@ public class WaterSystem : MonoBehaviour
         ComputeWater();
         if(inWater)
         {
-            StartCoroutine(RestoreCooldown());
-            //InvokeRepeating(nameof(IncreaseWaterPower),1f,1f);
+            if(cooldownStepTimer > 0.0f)
+            {
+                cooldownStepTimer -= Time.deltaTime;
+                if(cooldownStepTimer<=0.0f)
+                {
+                    IncreaseWaterPower();
+                    cooldownStepTimer = 1.0f;
+                }
+            }
         }
     }
 
@@ -60,11 +74,5 @@ public class WaterSystem : MonoBehaviour
         {
             inWater = false;
         }
-    }
-
-    IEnumerator RestoreCooldown()
-    {
-        yield return new WaitForSeconds(2.0f);
-        IncreaseWaterPower();
     }
 }
