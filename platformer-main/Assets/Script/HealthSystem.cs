@@ -59,4 +59,14 @@ public class HealthSystem : MonoBehaviour
         }
         return true;
     }
+    public bool IncreaseHealth()
+    {
+        if(health >= maxHealth) return false;
+        health++;
+        return true;
+    }
+    public float ReturnHealth()
+    {
+        return health;
+    }
 }

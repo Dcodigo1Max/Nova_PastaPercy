@@ -20,7 +20,6 @@ public class WaterSystem : MonoBehaviour
 
     private float cooldownStepTimer;
 
-
     void Start()
     {
         cooldownStepTimer = 1.0f;
@@ -48,10 +47,10 @@ public class WaterSystem : MonoBehaviour
         }
     }
 
-    public bool ReduceWaterPower()
+    public virtual bool ReduceWaterPower(float reduction)
     {
         if(waterpower <= 0) return false;
-        waterpower--;
+        waterpower -= reduction;
         return true;
     }
     public bool IncreaseWaterPower()

@@ -64,7 +64,15 @@ public class Player : Character
         {
             if(waterSystem.waterpower > 0)
                 Instantiate(BulletPrefab,BulletSpawn.position,transform.rotation);
-                waterSystem.ReduceWaterPower();
+                waterSystem.ReduceWaterPower(1);
+        }
+        if(Input.GetButtonDown("Fire2"))
+        {
+            if(waterSystem.waterpower > 3 && healthSystem.ReturnHealth() < 5)
+            {
+                healthSystem.IncreaseHealth();
+                waterSystem.ReduceWaterPower(3);
+            }
         }
 
         if(Input.GetButtonDown("Jump"))
