@@ -72,6 +72,7 @@ public class Player : Character
             {
                 healthSystem.IncreaseHealth();
                 waterSystem.ReduceWaterPower(3);
+                
             }
         }
 
