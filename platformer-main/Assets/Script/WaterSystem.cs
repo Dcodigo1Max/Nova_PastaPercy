@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class WaterSystem : MonoBehaviour
 {
+    public delegate void OnWaterChange(int gainWater);
     [SerializeField]
-    private float maxWaterPower = 100.0f;
+    private int maxWaterPower = 5;
 
-    public float waterpower;
-    public float wp => waterpower;
+    public int waterpower;
+    public int wp => waterpower;
     public float wpNormalized => wp / maxWaterPower;
+
+    public event OnWaterChange onWaterChange;
 
     [SerializeField]
     private Transform waterCheck;
@@ -47,7 +50,7 @@ public class WaterSystem : MonoBehaviour
         }
     }
 
-    public virtual bool ReduceWaterPower(float reduction)
+    public virtual bool ReduceWaterPower(int reduction)
     {
         if(waterpower <= 0) return false;
         waterpower -= reduction;
