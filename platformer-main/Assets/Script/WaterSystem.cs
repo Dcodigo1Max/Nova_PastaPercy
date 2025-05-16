@@ -44,6 +44,7 @@ public class WaterSystem : MonoBehaviour
                 if(cooldownStepTimer<=0.0f)
                 {
                     IncreaseWaterPower();
+                    onWaterChange?.Invoke(1);
                     cooldownStepTimer = 1.0f;
                 }
             }
@@ -54,6 +55,7 @@ public class WaterSystem : MonoBehaviour
     {
         if(waterpower <= 0) return false;
         waterpower -= reduction;
+        onWaterChange?.Invoke(-reduction);
         return true;
     }
     public bool IncreaseWaterPower()
