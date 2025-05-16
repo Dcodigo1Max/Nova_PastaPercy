@@ -17779,7 +17779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _faction: 1
-  maxHealth: 100
+  maxHealth: 2
   invulnerabilityDuration: 2
   health: 0
 --- !u!1 &827756076
