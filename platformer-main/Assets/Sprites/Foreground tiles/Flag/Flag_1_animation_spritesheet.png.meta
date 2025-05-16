@@ -447,7 +447,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Flag_1_animation_spritesheet_0: 5830547146343377401
+      Flag_1_animation_spritesheet_1: 1794070479673205886
+      Flag_1_animation_spritesheet_10: 3758101003998969568
+      Flag_1_animation_spritesheet_11: -22198059152321113
+      Flag_1_animation_spritesheet_12: -3719392467289676641
+      Flag_1_animation_spritesheet_2: 527617812388239013
+      Flag_1_animation_spritesheet_3: 3624856262644949707
+      Flag_1_animation_spritesheet_4: 3787942552883331913
+      Flag_1_animation_spritesheet_5: -8109143831086505440
+      Flag_1_animation_spritesheet_6: 6986303230609488793
+      Flag_1_animation_spritesheet_7: -2230150456995025067
+      Flag_1_animation_spritesheet_8: -2054513846635535330
+      Flag_1_animation_spritesheet_9: 4283868398359493566
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
