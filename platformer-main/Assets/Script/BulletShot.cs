@@ -4,10 +4,16 @@ public class BulletShot : MonoBehaviour
 {
     [SerializeField]
     private float speed = 400f;
+    [SerializeField]
+    private int damage;
+    private Faction faction = Faction.Player;
+    private HealthSystem healthSystem;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -15,14 +21,17 @@ public class BulletShot : MonoBehaviour
     {
         transform.position += transform.right * Time.deltaTime * speed;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        var enemy = collision.collider.GetComponent<Enemy>();
 
-        //if (enemy)
-        //{
-        //    enemy.TakeDamage(1);
-        //}
-        //Destroy(gameObject);
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        HealthSystem collidedobject = other.gameObject.GetComponent<HealthSystem>();
+        if (collidedobject != null)
+        {
+            if (FactionHelper.IsHostile(this.faction, collidedobject.faction))
+            {
+                collidedobject.DealDamage(damage);
+            }
+        }
+        Destroy(gameObject);
     }
 }

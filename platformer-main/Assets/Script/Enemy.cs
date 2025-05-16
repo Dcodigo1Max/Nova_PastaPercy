@@ -30,7 +30,14 @@ public class Enemy : Character
     protected override void Start()
     {
         base.Start();
+
+            healthSystem.onDeath += EnemyOnDeath;
     }
+    void EnemyOnDeath()
+    {
+        Destroy(gameObject);
+    }
+    
 
     // Update is called once per frame
     protected override void Update()
@@ -41,13 +48,13 @@ public class Enemy : Character
         {
             if ((checkEndOfPlatform) && (checkEndOfPlatformTransform != null))
             {
-                Collider2D collider = Physics2D.OverlapCircle(checkEndOfPlatformTransform.position,sensorRadius,checkEndOfPlatformMask);
+                Collider2D collider = Physics2D.OverlapCircle(checkEndOfPlatformTransform.position, sensorRadius, checkEndOfPlatformMask);
                 if (collider == null)
                 {
                     direction = -direction;
                 }
             }
-            if((checkWall) && (checkWallTransform != null))
+            if ((checkWall) && (checkWallTransform != null))
             {
                 Collider2D collider = Physics2D.OverlapCircle(checkWallTransform.position, sensorRadius, checkWallMask);
 

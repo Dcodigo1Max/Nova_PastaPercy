@@ -9,15 +9,17 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] 
     private Faction _faction;
     [SerializeField] 
-    private int maxHealth = 3;
+    private int maxHealth = 100;
     [SerializeField] 
     private float invulnerabilityDuration = 2.0f;
 
     public Faction faction => _faction;
+    [SerializeField]
     private int health;
     private float invulnerableTimer;
-
+    [SerializeField]
     public int hp => health;
+    [SerializeField]
     public int hpNormalized => hp / maxHealth;
     public event OnHealthChange onHealthChange;
     public event OnDeath onDeath;

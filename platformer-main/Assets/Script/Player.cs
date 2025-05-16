@@ -60,19 +60,18 @@ public class Player : Character
 
         currentVelocity.x = moveDir * velocity.x;
 
-        if(Input.GetButtonDown("Fire1"))
-        {
-            if(waterSystem.waterpower > 0)
-                Instantiate(BulletPrefab,BulletSpawn.position,transform.rotation);
+        if (Input.GetButtonDown("Fire1"))
+            {
+                if (waterSystem.waterpower > 0)
+                    Instantiate(BulletPrefab, BulletSpawn.position, transform.rotation);
                 waterSystem.ReduceWaterPower(1);
-        }
+            }
         if(Input.GetButtonDown("Fire2"))
         {
-            if(waterSystem.waterpower > 3 && healthSystem.ReturnHealth() < 5)
+            if(waterSystem.waterpower >= 3 && healthSystem.ReturnHealth() < 5)
             {
                 healthSystem.IncreaseHealth();
                 waterSystem.ReduceWaterPower(3);
-                
             }
         }
 
