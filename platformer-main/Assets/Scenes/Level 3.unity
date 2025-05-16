@@ -10726,6 +10726,7 @@ MonoBehaviour:
   _faction: 0
   maxHealth: 3
   invulnerabilityDuration: 2
+  health: 0
 --- !u!1 &715359441
 GameObject:
   m_ObjectHideFlags: 0
@@ -17559,6 +17560,7 @@ GameObject:
   - component: {fileID: 823781507}
   - component: {fileID: 823781511}
   - component: {fileID: 823781512}
+  - component: {fileID: 823781513}
   m_Layer: 0
   m_Name: TestEnemy
   m_TagString: Untagged
@@ -17764,6 +17766,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1088
   sensorRadius: 5
+--- !u!114 &823781513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823781505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ed74c65b4066e4b8177c36a34282f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _faction: 1
+  maxHealth: 100
+  invulnerabilityDuration: 2
+  health: 0
 --- !u!1 &827756076
 GameObject:
   m_ObjectHideFlags: 0
