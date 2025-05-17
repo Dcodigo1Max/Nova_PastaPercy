@@ -1,46 +1,13 @@
 fileFormatVersion: 2
-guid: ac7dc3f1f3e4d4542abb0812f3f84ce5
+guid: 8f9a11ace3065874aa8222a935dc3ae6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5830547146343377401
-    second: Flag_1_animation_spritesheet_0
+      213: -2272493399300273447
+    second: Tilesets 1_0
   - first:
-      213: 1794070479673205886
-    second: Flag_1_animation_spritesheet_1
-  - first:
-      213: 527617812388239013
-    second: Flag_1_animation_spritesheet_2
-  - first:
-      213: 3624856262644949707
-    second: Flag_1_animation_spritesheet_3
-  - first:
-      213: 3787942552883331913
-    second: Flag_1_animation_spritesheet_4
-  - first:
-      213: -8109143831086505440
-    second: Flag_1_animation_spritesheet_5
-  - first:
-      213: 6986303230609488793
-    second: Flag_1_animation_spritesheet_6
-  - first:
-      213: -2230150456995025067
-    second: Flag_1_animation_spritesheet_7
-  - first:
-      213: -2054513846635535330
-    second: Flag_1_animation_spritesheet_8
-  - first:
-      213: 4283868398359493566
-    second: Flag_1_animation_spritesheet_9
-  - first:
-      213: 3758101003998969568
-    second: Flag_1_animation_spritesheet_10
-  - first:
-      213: -22198059152321113
-    second: Flag_1_animation_spritesheet_11
-  - first:
-      213: -3719392467289676641
-    second: Flag_1_animation_spritesheet_12
+      213: -8264365999720118642
+    second: Tilesets 1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 4
+  spritePixelsToUnits: 0.5
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,30 +99,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_0
+      name: Tilesets 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
-        width: 320
-        height: 320
+        x: 192
+        y: 128
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f9e6ffecb34ae050800000000000000
-      internalID: 5830547146343377401
+      spriteID: 9da89442b4b7670e0800000000000000
+      internalID: -2272493399300273447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_1
+      name: Tilesets 1_1
       rect:
         serializedVersion: 2
-        x: 320
-        y: 320
-        width: 320
-        height: 320
+        x: 32
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,262 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e74afea8891d5e810800000000000000
-      internalID: 1794070479673205886
+      spriteID: e86cdd4e8e21f4d80800000000000000
+      internalID: -8264365999720118642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_2
+      name: Tilesets 1_2
       rect:
         serializedVersion: 2
-        x: 640
-        y: 320
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a6d19cda99725700800000000000000
-      internalID: 527617812388239013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 320
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc26dc8c0931e4230800000000000000
-      internalID: 3624856262644949707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 320
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9438236bea9719430800000000000000
-      internalID: 3787942552883331913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 1600
-        y: 320
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 022e98356a8867f80800000000000000
-      internalID: -8109143831086505440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 320
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99b74a1f5c554f060800000000000000
-      internalID: 6986303230609488793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 2240
-        y: 320
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 55fe227a9f9ec01e0800000000000000
-      internalID: -2230150456995025067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e14ea21ba86ec73e0800000000000000
-      internalID: -2054513846635535330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebb3db48c9b537b30800000000000000
-      internalID: 4283868398359493566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0eeb56da3f4772430800000000000000
-      internalID: 3758101003998969568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 0
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a5d5899bf221bff0800000000000000
-      internalID: -22198059152321113
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_12
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 320
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f946fe6d140126cc0800000000000000
-      internalID: -3719392467289676641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_13
-      rect:
-        serializedVersion: 2
-        x: 1600
-        y: 0
-        width: 320
-        height: 320
+        x: 160
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6549e8f7ddeb5b64094bf579d26a9f58
-      internalID: -1322093594
+      spriteID: c05b5cf5d64eec44da481909446cc8ba
+      internalID: 940849812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_14
+      name: Tilesets 1_3
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 320
-        height: 320
+        x: 192
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7d56b1c7ba641340a49761fd911a696
-      internalID: 584232718
+      spriteID: 3f59976062aa08f4e9215db02bbdaa61
+      internalID: -1995057163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Flag_1_animation_spritesheet_15
+      name: Tilesets 1_4
       rect:
         serializedVersion: 2
-        x: 2240
-        y: 0
-        width: 320
-        height: 320
+        x: 224
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,8 +206,360 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ca26883decbf3148b7517c6b50f6a9c
-      internalID: -636495697
+      spriteID: 700095e707ae91a458069cc2f36e36ae
+      internalID: -503833955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f744bc46023ca48968a002fb9636a4
+      internalID: -2053933266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33382ed4c73463642b5d17928bc30b51
+      internalID: -1907553407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8739e49b5bfd37445a583a5cdfef982a
+      internalID: -1337125375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea436ab38d6416488af6c8431f9589a
+      internalID: 1934751322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fc383519aaa7a4ab1a925c4048ac35
+      internalID: -95227506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad19d276820e2b45ae0c5469c993898
+      internalID: 532126708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f503ba9a308e893429c93d83e59ab459
+      internalID: -408814140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_12
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d72721357bcf4b42807c128504de8e7
+      internalID: -1412703882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e67bbe21eb64cd41a248d7911f5e46c
+      internalID: -820993365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64a7f42205796e43aaaa1e41a8e2c61
+      internalID: 1673951895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e9be4d0d52a024f9bf0460509318a9
+      internalID: 1532266719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2984dcb52cdd243beea546a1306db4
+      internalID: -1681983514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95c1424e4f457a43997b8543838f920
+      internalID: -600068191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fd0bf58a30fb9489caff4b5bbce531
+      internalID: -942328236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2109336b45153c24cb2912a060d19936
+      internalID: 59127636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilesets 1_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66d812d0c42e764e966096961d7c96e
+      internalID: 1610778553
       vertices: []
       indices: 
       edges: []
@@ -504,7 +568,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 818972227dc64014696ae564f6703e97
+    spriteID: a2b6c017409ecb64d9f4389d493cd5a7
     internalID: 0
     vertices: []
     indices: 
@@ -514,22 +578,27 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flag_1_animation_spritesheet_0: 5830547146343377401
-      Flag_1_animation_spritesheet_1: 1794070479673205886
-      Flag_1_animation_spritesheet_10: 3758101003998969568
-      Flag_1_animation_spritesheet_11: -22198059152321113
-      Flag_1_animation_spritesheet_12: -3719392467289676641
-      Flag_1_animation_spritesheet_13: -1322093594
-      Flag_1_animation_spritesheet_14: 584232718
-      Flag_1_animation_spritesheet_15: -636495697
-      Flag_1_animation_spritesheet_2: 527617812388239013
-      Flag_1_animation_spritesheet_3: 3624856262644949707
-      Flag_1_animation_spritesheet_4: 3787942552883331913
-      Flag_1_animation_spritesheet_5: -8109143831086505440
-      Flag_1_animation_spritesheet_6: 6986303230609488793
-      Flag_1_animation_spritesheet_7: -2230150456995025067
-      Flag_1_animation_spritesheet_8: -2054513846635535330
-      Flag_1_animation_spritesheet_9: 4283868398359493566
+      Tilesets 1_0: -2272493399300273447
+      Tilesets 1_1: -8264365999720118642
+      Tilesets 1_10: 532126708
+      Tilesets 1_11: -408814140
+      Tilesets 1_12: -1412703882
+      Tilesets 1_13: -820993365
+      Tilesets 1_14: 1673951895
+      Tilesets 1_15: 1532266719
+      Tilesets 1_16: -1681983514
+      Tilesets 1_17: -600068191
+      Tilesets 1_18: -942328236
+      Tilesets 1_19: 59127636
+      Tilesets 1_2: 940849812
+      Tilesets 1_20: 1610778553
+      Tilesets 1_3: -1995057163
+      Tilesets 1_4: -503833955
+      Tilesets 1_5: -2053933266
+      Tilesets 1_6: -1907553407
+      Tilesets 1_7: -1337125375
+      Tilesets 1_8: 1934751322
+      Tilesets 1_9: -95227506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
