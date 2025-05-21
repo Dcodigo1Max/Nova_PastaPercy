@@ -37,7 +37,6 @@ public class Enemy : Character
     {
         Destroy(gameObject);
     }
-    
 
     // Update is called once per frame
     protected override void Update()

@@ -29,6 +29,7 @@ public class BulletShot : MonoBehaviour
         {
             if (FactionHelper.IsHostile(this.faction, collidedobject.faction))
             {
+                Debug.Log("Dealt damage");
                 collidedobject.DealDamage(damage);
             }
         }
