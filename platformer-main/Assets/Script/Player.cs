@@ -71,10 +71,10 @@ public class Player : Character
         }
         if (Input.GetKeyDown(KeyCode.Return))
             {
-                if (waterSystem.waterpower >= 1 && healthSystem.ReturnHealth() < 5)
+                if (waterSystem.waterpower >= 3 && healthSystem.ReturnHealth() < 5)
                 {
                     healthSystem.AddHealth(1);
-                    waterSystem.ReduceWaterPower(1);
+                    waterSystem.ReduceWaterPower(3);
                 }
             }
 
