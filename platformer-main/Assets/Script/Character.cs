@@ -70,6 +70,10 @@ public abstract class Character : MonoBehaviour
                 spriteRenderer.enabled = !spriteRenderer.enabled;
             }
         }
+        else
+        {
+            spriteRenderer.enabled = true;
+        }
     }
 
     protected void ComputeGrounded()
