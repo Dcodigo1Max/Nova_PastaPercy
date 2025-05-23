@@ -61,19 +61,22 @@ public class Player : Character
         currentVelocity.x = moveDir * velocity.x;
 
         if (Input.GetButtonDown("Fire1"))
-            {
-                if (waterSystem.waterpower > 0)
-                    Instantiate(BulletPrefab, BulletSpawn.position, transform.rotation);
-                waterSystem.ReduceWaterPower(1);
-            }
-        if(Input.GetKeyDown(KeyCode.Return))
         {
-            if(waterSystem.waterpower >= 1 && healthSystem.ReturnHealth() < 5)
+            if (waterSystem.waterpower > 0)
             {
-                healthSystem.AddHealth(1);
+                animator.SetTrigger("isFired");
+                Instantiate(BulletPrefab, BulletSpawn.position, transform.rotation);
                 waterSystem.ReduceWaterPower(1);
             }
         }
+        if (Input.GetKeyDown(KeyCode.Return))
+            {
+                if (waterSystem.waterpower >= 1 && healthSystem.ReturnHealth() < 5)
+                {
+                    healthSystem.AddHealth(1);
+                    waterSystem.ReduceWaterPower(1);
+                }
+            }
 
         if(Input.GetButtonDown("Jump"))
         {
