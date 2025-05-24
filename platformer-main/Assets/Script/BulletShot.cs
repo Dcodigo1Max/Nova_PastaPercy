@@ -9,17 +9,20 @@ public class BulletShot : MonoBehaviour
     private Faction faction = Faction.Player;
     private HealthSystem healthSystem;
 
+    private float shotDuration = 2.5f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        Destroy(this.gameObject, shotDuration);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position += transform.right * Time.deltaTime * speed;
+
     }
 
     void OnCollisionEnter2D(Collision2D other)

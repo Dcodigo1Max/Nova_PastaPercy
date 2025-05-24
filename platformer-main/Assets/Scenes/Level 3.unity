@@ -11754,7 +11754,7 @@ Transform:
   m_GameObject: {fileID: 707571779}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 801, y: -255, z: 0}
+  m_LocalPosition: {x: 4307, y: -119, z: 0}
   m_LocalScale: {x: 23.02, y: 23.02, z: 23.02}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -11806,8 +11806,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1088
   horizontalAxisName: Horizontal
-  jumpMaxDuration: 0.5
-  jumpGravityScale: 2
+  jumpMaxDuration: 0.8
+  jumpGravityScale: 1.25
   groundCollider: {fileID: 707571781}
   airCollider: {fileID: 707571790}
   BulletPrefab: {fileID: 4391125026349907760, guid: 30b46182f33db3742a95d4482e320d9c, type: 3}
