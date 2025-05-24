@@ -9,7 +9,11 @@ public class AudioManager : MonoBehaviour
     [Header("------Audio Clip--------")]
     public AudioClip background;
     public AudioClip Water;
+    public AudioClip Bushes;
+    public AudioClip Waterattack;
     public AudioClip BgSwordFighting;
+    public AudioClip Running;
+    public AudioClip Jumping;
 
     private void Start()
     {

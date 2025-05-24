@@ -24,6 +24,13 @@ public class Player : Character
     [SerializeField]
     private Transform BulletSpawn;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     protected override float GetDirection()
     {
         return moveDir;
@@ -65,6 +72,7 @@ public class Player : Character
             if (waterSystem.waterpower > 0)
             {
                 animator.SetTrigger("isFired");
+                audioManager.PlaySFX(audioManager.Waterattack);
                 Instantiate(BulletPrefab, BulletSpawn.position, transform.rotation);
                 waterSystem.ReduceWaterPower(1);
             }
@@ -85,14 +93,17 @@ public class Player : Character
                 currentVelocity.y = velocity.y;
                 jumpTimer = 0.0f;
                 rb.gravityScale = jumpGravityScale;
+                
             }
         }
         else if (jumpTimer < jumpMaxDuration)
         {
             jumpTimer = jumpTimer + Time.deltaTime;
+            audioManager.PlaySFX(audioManager.Jumping);
             if (Input.GetButton("Jump"))
             {
                 rb.gravityScale = Mathf.Lerp(jumpGravityScale, originalGravity, jumpTimer / jumpMaxDuration);
+                
             }
             else
             {
