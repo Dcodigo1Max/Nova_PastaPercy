@@ -51,6 +51,7 @@ public class Player : Character
     private void PlayerOnDeath()
     {
         Destroy(gameObject);
+        audioManager.PlaySFX(audioManager.Death, 1);
     }
 
     // Update is called once per frame
@@ -72,7 +73,7 @@ public class Player : Character
             if (waterSystem.waterpower > 0)
             {
                 animator.SetTrigger("isFired");
-                audioManager.PlaySFX(audioManager.Waterattack);
+                audioManager.PlaySFX(audioManager.Waterattack,1);
                 Instantiate(BulletPrefab, BulletSpawn.position, transform.rotation);
                 waterSystem.ReduceWaterPower(1);
             }
@@ -110,7 +111,8 @@ public class Player : Character
         else if (jumpTimer < jumpMaxDuration)
         {
             jumpTimer = jumpTimer + Time.deltaTime;
-            audioManager.PlaySFX(audioManager.Jumping);
+            
+            audioManager.PlaySFX(audioManager.Jumping,0.15f);
             if (Input.GetButton("Jump"))
             {
                 rb.gravityScale = Mathf.Lerp(jumpGravityScale, originalGravity, jumpTimer / jumpMaxDuration);

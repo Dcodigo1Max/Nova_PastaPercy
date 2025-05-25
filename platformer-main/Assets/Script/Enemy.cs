@@ -21,6 +21,13 @@ public class Enemy : Character
 
     private float direction = 1.0f;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     protected override float GetDirection()
     {
         return direction;
@@ -36,6 +43,7 @@ public class Enemy : Character
     void EnemyOnDeath()
     {
         Destroy(gameObject);
+        audioManager.PlaySFX(audioManager.Death, 1);
     }
 
     // Update is called once per frame
@@ -45,6 +53,7 @@ public class Enemy : Character
 
         if (isGround)
         {
+            
             if ((checkEndOfPlatform) && (checkEndOfPlatformTransform != null))
             {
                 Collider2D collider = Physics2D.OverlapCircle(checkEndOfPlatformTransform.position, sensorRadius, checkEndOfPlatformMask);
