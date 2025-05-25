@@ -23,6 +23,10 @@ public class WaterSystem : MonoBehaviour
 
     private float cooldownStepTimer;
 
+    AudioManager audioManager;
+
+
+
     void Start()
     {
         cooldownStepTimer = 1.0f;
@@ -31,6 +35,7 @@ public class WaterSystem : MonoBehaviour
     void Awake()
     {
         waterpower = maxWaterPower;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Update()
@@ -62,7 +67,9 @@ public class WaterSystem : MonoBehaviour
     {
         if(waterpower >= maxWaterPower) return false;
         waterpower++;
+        audioManager.PlaySFX(audioManager.Water, 0.5f);
         return true;
+
     }
 
     void ComputeWater()
@@ -73,6 +80,7 @@ public class WaterSystem : MonoBehaviour
         if ( watercollider != null)
         {
             inWater = true;
+            
         }
         else
         {
