@@ -25,6 +25,7 @@ public class Pause : MonoBehaviour
             else
             {
                 PauseGame();
+
             }
         }
     }
@@ -44,12 +45,14 @@ public class Pause : MonoBehaviour
 
     }
 
+    
     public void ToMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
+      
     }
-
+    
 
 
 
