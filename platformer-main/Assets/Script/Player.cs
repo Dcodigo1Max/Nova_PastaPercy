@@ -68,7 +68,7 @@ public class Player : Character
 
         currentVelocity.x = moveDir * velocity.x;
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown("f"))
         {
             if (waterSystem.waterpower > 0)
             {
