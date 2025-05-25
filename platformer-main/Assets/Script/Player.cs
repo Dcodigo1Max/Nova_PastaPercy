@@ -25,9 +25,9 @@ public class Player : Character
     [SerializeField]
     private Transform BulletSpawn;
 
-    AudioManager audioManager;
+    private Vector2 originalVelocity;
 
-    private EndLevel endLevel;
+    AudioManager audioManager;
 
     private void Awake()
     {
@@ -49,6 +49,8 @@ public class Player : Character
         originalGravity = rb.gravityScale;
 
         healthSystem.onDeath += PlayerOnDeath;
+
+        originalVelocity = velocity;
     }
 
     private void PlayerOnDeath()
@@ -95,48 +97,55 @@ public class Player : Character
                     waterSystem.ReduceWaterPower(3);
                 }
             }
-            
+
         if (Input.GetKey(KeyCode.RightShift))
         {
             if (isGround)
             {
-                currentVelocity.x *= 2;
+                velocity = sprintvelocity;
             }
         }
-
         else
+        {
+            velocity = originalVelocity;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Level 3");
+        }
 
         if (Input.GetButtonDown("Jump"))
-        {
-            if (isGround)
             {
-                currentVelocity.y = velocity.y;
-                jumpTimer = 0.0f;
-                rb.gravityScale = jumpGravityScale;
+                if (isGround)
+                {
+                    currentVelocity.y = velocity.y;
+                    jumpTimer = 0.0f;
+                    rb.gravityScale = jumpGravityScale;
 
+                }
             }
-        }
 
-        else if (jumpTimer < jumpMaxDuration)
-        {
-            jumpTimer = jumpTimer + Time.deltaTime;
-            
-            audioManager.PlaySFX(audioManager.Jumping,0.15f);
-            if (Input.GetButton("Jump"))
+            else if (jumpTimer < jumpMaxDuration)
             {
-                rb.gravityScale = Mathf.Lerp(jumpGravityScale, originalGravity, jumpTimer / jumpMaxDuration);
+                jumpTimer = jumpTimer + Time.deltaTime;
 
+                audioManager.PlaySFX(audioManager.Jumping, 0.15f);
+                if (Input.GetButton("Jump"))
+                {
+                    rb.gravityScale = Mathf.Lerp(jumpGravityScale, originalGravity, jumpTimer / jumpMaxDuration);
+
+                }
+                else
+                {
+                    jumpTimer = jumpMaxDuration;
+                    rb.gravityScale = originalGravity;
+                }
             }
             else
             {
-                jumpTimer = jumpMaxDuration;
                 rb.gravityScale = originalGravity;
             }
-        }
-        else
-        {
-            rb.gravityScale = originalGravity;
-        }
 
         rb.linearVelocity = currentVelocity;
 
