@@ -5,6 +5,8 @@ public abstract class Character : MonoBehaviour
     [SerializeField]
     protected Vector2 velocity;
     [SerializeField]
+    protected Vector2 sprintvelocity;
+    [SerializeField]
     protected Transform groundCheck;
     [SerializeField, Range(0.1f, 5.0f)]
     protected float groundCheckRadius = 2.0f;
@@ -18,6 +20,15 @@ public abstract class Character : MonoBehaviour
     protected bool isGround;
     protected bool invulnerableEnable = false;
     protected float invulnerableTimer;
+
+    [SerializeField]
+    protected Transform endCheck;
+    [SerializeField, Range(0.1f, 5.0f)]
+    protected float endCheckRadius = 2.0f;
+    [SerializeField]
+    protected LayerMask endCheckLayers;
+
+    protected bool isEndLevel;
 
     protected abstract float GetDirection();
 
@@ -90,9 +101,23 @@ public abstract class Character : MonoBehaviour
         }
     }
     
+    protected void ComputeEnd()
+    {
+        Collider2D collider = Physics2D.OverlapCircle(endCheck.position, endCheckRadius, endCheckLayers);
+
+        if(collider != null)
+        {
+            isEndLevel = true;
+        }
+        else
+        {
+            isEndLevel = false;
+        }
+    }
+    
     protected virtual void OnDrawGizmosSelected()
     {
-        if(groundCheck == null) return;
+        if (groundCheck == null) return;
 
         ComputeGrounded();
 

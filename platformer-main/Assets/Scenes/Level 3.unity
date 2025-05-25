@@ -9568,7 +9568,7 @@ Transform:
   m_GameObject: {fileID: 614487641}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12915,7 +12915,7 @@ Transform:
   m_GameObject: {fileID: 707571779}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 186, y: -372, z: 0}
+  m_LocalPosition: {x: 10643, y: 6, z: 0}
   m_LocalScale: {x: 23.02, y: 23.02, z: 23.02}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -12966,6 +12966,11 @@ MonoBehaviour:
   groundCheckLayers:
     serializedVersion: 2
     m_Bits: 1088
+  endCheck: {fileID: 614487642}
+  endCheckRadius: 2
+  endCheckLayers:
+    serializedVersion: 2
+    m_Bits: 8192
   horizontalAxisName: Horizontal
   jumpMaxDuration: 0.8
   jumpGravityScale: 1.25
@@ -52993,7 +52998,7 @@ MonoBehaviour:
 
     When
     there''s no solid ground below character, the character will start falling after
-    0,15s, with a gravity scale of 2.
+    0.15s, with a gravity scale of 2.
 
     The character''s trajectory can be modified
     mid-air.
@@ -53006,13 +53011,13 @@ MonoBehaviour:
     [Jump] button.
 
     The vertical velocity will be 500 units/second while jump
-    is pressed, during a maximum of 0,2 seconds.
+    is pressed, during a maximum of 0.2 seconds.
 
     Jump height will be between
-    88 to 188 units (from 0,35 to 0,55 seconds to top of trajectory).
+    88 to 188 units (from 0.35 to 0.55 seconds to top of trajectory).
 
     If the
-    character presses the jump button up to 0,1s before hitting the ground, it will
+    character presses the jump button up to 0.1s before hitting the ground, it will
     jump automatically again.
 
     This controller also controls some visuals:

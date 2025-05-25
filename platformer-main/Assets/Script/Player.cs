@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Character
 {
@@ -25,6 +26,8 @@ public class Player : Character
     private Transform BulletSpawn;
 
     AudioManager audioManager;
+
+    private EndLevel endLevel;
 
     private void Awake()
     {
@@ -58,6 +61,12 @@ public class Player : Character
     protected override void Update()
     {
         ComputeGrounded();
+        ComputeEnd();
+
+        if (isEndLevel)
+        {
+            SceneManager.LoadScene("Menu");
+        }
 
         groundCollider.enabled = isGround;
         airCollider.enabled = !isGround;
@@ -67,21 +76,13 @@ public class Player : Character
         Vector2 currentVelocity = rb.linearVelocity;
 
         currentVelocity.x = moveDir * velocity.x;
-        /*if (currentVelocity.x != 0)
-        {
-            audioManager.LoopSFX(audioManager.Running, 0.05f);
-        }
-        else
-        {
-            audioManager.StopLoopSFX(audioManager.Running, 0);
-        }*/
 
-        if (Input.GetKeyDown("f"))
+        if (Input.GetButtonDown("Fire1"))
         {
             if (waterSystem.waterpower > 0)
             {
                 animator.SetTrigger("isFired");
-                audioManager.PlaySFX(audioManager.Waterattack, 1);
+                audioManager.PlaySFX(audioManager.Waterattack,1);
                 Instantiate(BulletPrefab, BulletSpawn.position, transform.rotation);
                 waterSystem.ReduceWaterPower(1);
             }
