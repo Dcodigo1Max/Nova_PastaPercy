@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BulletShot : MonoBehaviour
+public class WaterProjectile : MonoBehaviour
 {
     [SerializeField]
     private float speed = 400f;

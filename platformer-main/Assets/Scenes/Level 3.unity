@@ -12915,7 +12915,7 @@ Transform:
   m_GameObject: {fileID: 707571779}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10643, y: 6, z: 0}
+  m_LocalPosition: {x: 202, y: -372.2, z: 0}
   m_LocalScale: {x: 23.02, y: 23.02, z: 23.02}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -12961,6 +12961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 250, y: 500}
+  sprintvelocity: {x: 425, y: 500}
   groundCheck: {fileID: 976160328}
   groundCheckRadius: 2
   groundCheckLayers:

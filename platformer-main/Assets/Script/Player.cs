@@ -21,7 +21,7 @@ public class Player : Character
     protected WaterSystem waterSystem;
 
     [SerializeField]
-    private BulletShot BulletPrefab;
+    private WaterProjectile BulletPrefab;
     [SerializeField]
     private Transform BulletSpawn;
 
