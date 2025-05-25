@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
+    public static Timer instance;
+
+    private bool GameOver = false;
+
     [SerializeField] TextMeshProUGUI timerText;
 
     [SerializeField] float remainingTime;
@@ -25,4 +29,28 @@ public class Timer : MonoBehaviour
 
 
     }
+
+
+    public void GameWon()
+    {
+        GameOver = true;
+
+        
+        float bestTime = GetBestTime();
+
+        PlayerPrefs.SetFloat("remainingTime", bestTime);
+        PlayerPrefs.Save();
+
+    }
+
+
+
+
+
+    public float GetBestTime()
+    {
+        return remainingTime;
+    }
+
+
 }
