@@ -67,13 +67,21 @@ public class Player : Character
         Vector2 currentVelocity = rb.linearVelocity;
 
         currentVelocity.x = moveDir * velocity.x;
+        /*if (currentVelocity.x != 0)
+        {
+            audioManager.LoopSFX(audioManager.Running, 0.05f);
+        }
+        else
+        {
+            audioManager.StopLoopSFX(audioManager.Running, 0);
+        }*/
 
         if (Input.GetKeyDown("f"))
         {
             if (waterSystem.waterpower > 0)
             {
                 animator.SetTrigger("isFired");
-                audioManager.PlaySFX(audioManager.Waterattack,1);
+                audioManager.PlaySFX(audioManager.Waterattack, 1);
                 Instantiate(BulletPrefab, BulletSpawn.position, transform.rotation);
                 waterSystem.ReduceWaterPower(1);
             }
