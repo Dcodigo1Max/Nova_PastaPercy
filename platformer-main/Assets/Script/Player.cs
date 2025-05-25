@@ -67,7 +67,6 @@ public class Player : Character
 
         if (isEndLevel)
         {
-            Timer.instance.GameWon();
             SceneManager.LoadScene("Menu");
         }
 
