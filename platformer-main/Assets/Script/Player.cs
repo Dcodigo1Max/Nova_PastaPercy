@@ -85,17 +85,28 @@ public class Player : Character
                     waterSystem.ReduceWaterPower(3);
                 }
             }
-
-        if(Input.GetButtonDown("Jump"))
+            
+        if (Input.GetKey(KeyCode.RightShift))
         {
-            if(isGround)
+            if (isGround)
+            {
+                currentVelocity.x *= 2;
+            }
+        }
+
+        else
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (isGround)
             {
                 currentVelocity.y = velocity.y;
                 jumpTimer = 0.0f;
                 rb.gravityScale = jumpGravityScale;
-                
+
             }
         }
+
         else if (jumpTimer < jumpMaxDuration)
         {
             jumpTimer = jumpTimer + Time.deltaTime;
@@ -103,7 +114,7 @@ public class Player : Character
             if (Input.GetButton("Jump"))
             {
                 rb.gravityScale = Mathf.Lerp(jumpGravityScale, originalGravity, jumpTimer / jumpMaxDuration);
-                
+
             }
             else
             {
